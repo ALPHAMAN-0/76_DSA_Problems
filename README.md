@@ -5,6 +5,8 @@ This repository contains 77 DSA problems with their video solutions and approach
 
 Programming Languaage: Python 
 
+Tests for the C++ solutions: `g++ -std=c++17 tests/array_tests.cpp -o tests/array_tests.out && ./tests/array_tests.out`
+
 | # | Video Solution | Category | Name | Link | Notes |
 |----|----------------|----------|------|------|-------|
 | 1 | [Watch Video](https://youtu.be/KLlXCFG5TnA) | Arrays | Two Sum | [LeetCode](https://leetcode.com/problems/two-sum/) | use hash map to instantly check for difference value, map will add index of last occurrence of a num, don't use same element twice; |
