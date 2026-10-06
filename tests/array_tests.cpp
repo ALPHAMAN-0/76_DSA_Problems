@@ -100,10 +100,16 @@ static void testBoyerMooreVoting() {
     V noWinner = {3, 2, 2, 4, 1, 4};
     CHECK(boyerMoore::findMajority(noWinner).empty());
 
+    // already in increasing order, nothing to swap
+    V sortedWinners = {1, 1, 2, 2};
+    CHECK(boyerMoore::findMajority(sortedWinners) == (V{1, 2}));
+
     // -1 is the initial value of both candidates; it must still be counted
     // correctly and reported only once
     V minusOnes = {-1, -1, 2};
     CHECK(boyerMoore::findMajority(minusOnes) == (V{-1}));
+    V onlyMinusOnes = {-1, -1, -1};
+    CHECK(boyerMoore::findMajority(onlyMinusOnes) == (V{-1}));
 
     V allSame = {6, 6, 6, 6};
     CHECK(boyerMoore::findMajority(allSame) == (V{6}));
@@ -137,6 +143,10 @@ static void testMinimizeHeights() {
     V unsorted = {10, 1, 8, 5};
     CHECK(minimizeHeights::getMinDiff(unsorted, 2) == 5);
     CHECK(unsorted == (V{1, 5, 8, 10}));
+
+    // k is larger than every height, so no tower can be lowered
+    V low = {1, 2, 3};
+    CHECK(minimizeHeights::getMinDiff(low, 5) == 2);
 
     V one = {4};
     CHECK(minimizeHeights::getMinDiff(one, 3) == 0);
