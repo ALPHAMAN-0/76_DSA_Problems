@@ -4,12 +4,8 @@ This Repository Help to crack every DSA pattern questions hole Life learn a prog
 ## Architecture / How it Works
 
 ```mermaid
-flowchart LR
-    A[User] --> B[76 Dsa Problems]
-    B --> C{Logic}
-    C --> D[(Data)]
-    C --> E[Output]
-    D --> C
+flowchart TD
+    ProblemIndex[ProblemIndex] --> Array[Array]
 ```
 
 
