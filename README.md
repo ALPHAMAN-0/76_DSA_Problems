@@ -1,6 +1,18 @@
 # 77 DSA Problem
 This Repository Help to crack every DSA pattern questions hole Life learn a programmer
 
+## Architecture / How it Works
+
+```mermaid
+flowchart LR
+    A[User] --> B[76 Dsa Problems]
+    B --> C{Logic}
+    C --> D[(Data)]
+    C --> E[Output]
+    D --> C
+```
+
+
 This repository contains 77 DSA problems with their video solutions and approach notes. Each problem is categorized by its data structure or algorithm type, making it easier to navigate and study specific topics.
 
 Programming Languaage: Python 
