@@ -1,9 +1,19 @@
 # 77 DSA Problem
 This Repository Help to crack every DSA pattern questions hole Life learn a programmer
 
+## Architecture / How it Works
+
+```mermaid
+flowchart TD
+    ProblemIndex[ProblemIndex] --> Array[Array]
+```
+
+
 This repository contains 77 DSA problems with their video solutions and approach notes. Each problem is categorized by its data structure or algorithm type, making it easier to navigate and study specific topics.
 
 Programming Languaage: Python 
+
+Tests for the C++ solutions: `g++ -std=c++17 tests/array_tests.cpp -o tests/array_tests.out && ./tests/array_tests.out`
 
 | # | Video Solution | Category | Name | Link | Notes |
 |----|----------------|----------|------|------|-------|
